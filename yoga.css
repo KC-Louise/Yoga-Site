@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+    margin: 0;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a:hover {
+    color: rgb(255, 67, 128, 0.9);
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+a {
+    text-decoration: none;
+}
+
+h2 a {
+    color: white;
+}
+nav {
+    margin: 0;
+}
+
+.nav-scroll {
+    background-color:#000;
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar {
+    margin: 0;
+}
+
+.navbar a, li {
+    transition: all 0.3s ease 0s;
+    list-style: none;
+    display: inline-block;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-decoration: none;;
+}
+
+.navbar li a:hover {
+    color: rgb(255, 67, 128, 0.9);
+    transition: all 0.3s ease 0s;
+}
+
+.navbar li {
+    padding: 1.5rem;
+}
+
+.left span {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3em ;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background-color: rgba(190, 190, 190, 1);
+    padding: 0.6em 0.9em 0.6em 0.9em;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 10%;
+}
+
+button:hover {
+    background-color: rgba(190, 190, 190, 0.6);
+}
+
+.hamburger {
+    background: transparent;
+    cursor: pointer;
+}
+
+.navbar a:active {
+    color: rgb(255, 67, 128, 0.5);
+}
+
+.showcase-home::after {
+    display: flex;
+    content:'';
+    background-image: url(images/bwdowndog.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    transition: all 1000ms;
+}
+
+.showcase-home:hover::after {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+
+.showcase::after {
+    display: flex;
+    content:'';
+    background-image: url(images/bwprayerhands.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    transition: all 1000ms;
+}
+
+.showcase:hover::after {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+
+.content {
+    position: absolute;
+    z-index: 1;
+    top: 25%;
+    left: 50%;
+    margin-left:-145px;
+    width: 300px;
+    height: 10rem;
+    text-align: center;
+    transition: all 1000ms;
+}
+
+.content .logo {
+    height: 180px;
+    width: 180px;
+}
+
+header .logo{
+    padding-right: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+.modal .logo{
+    height: 50px;
+    width: 50px;
+}
+
+.content .title {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 2.2rem;
+    margin-top: 1rem;
+    text-shadow: 2px 2px rgba(53, 53, 53, 0.637);
+}
+
+.content .text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.7rem;
+    line-height: 1.7;
+    margin-top: 1rem;
+    text-shadow: 2px 2px rgba(53, 53, 53, 0.637);
+}
+
+.container {
+    color: #000;
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 2rem 1rem;
+    
+}
+
+.grid-1{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-2{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+.center {
+    text-align: center;
+    margin:auto;
+}
+
+.left {
+    text-align: left;
+    margin: auto;
+    line-height: 1.7;
+    padding: 0.8em;
+}
+
+.bg-light {
+    background: #f4f4f4;
+    color: #000;
+}
+
+.bg-dark {
+    background: #000;
+    color: #f4f4f4;
+}
+
+.services #classlist {
+    color: #000;
+    padding: 0;
+}
+
+.services p {
+    line-height: 1.7;
+}
+
+#classlist h2 {
+    color: #000;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    margin-bottom: 0;
+    padding-top: 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.divider {
+    box-shadow: 2px 0 4px gray;
+}
+
+.location h3 {
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.location .left {
+    padding: 1rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+.modal-content {
+    background-color: #fff;
+    color: #000;
+    margin: 20%;
+    width: 70%;
+    padding: 0.9rem;
+    animation: modalopen 1s;
+    overflow: auto;
+}
+
+@keyframes modalopen{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+
+.input {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    padding-top: 0.6rem;
+}
+
+.modal h3 {
+    text-transform: uppercase;
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+}
+
+.modal p {
+    text-align: center;
+    margin: 0;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-rows {
+    display: none;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+table {
+    text-align: center;
+    width: 100%;
+    padding: 1.2rem;
+}
+
+th, td {
+    padding: 0.5rem 1rem;
+}
+
+th {
+    border-top: thin dotted #000;
+    width: 50px;
+}
+
+td {
+    width: 50rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    border-radius: 0.2rem;
+}
+
+td span {
+    font-size: 0.7rem;
+}
+
+#schedule {
+    text-transform: uppercase;
+    color: #000;
+    margin: 1.2rem;
+    text-align: center;
+}
+
+.classTimes {
+    display: none;
+}
+
+.current {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.vinyasa-schedule {
+    background-color:lightgreen;
+}
+
+.yin-schedule {
+    background-color: lightblue;
+}
+
+.bikram-schedule {
+    background-color: pink;
+}
+
+.no-classes {
+    background-color: rgb(221, 221, 221);
+}
+
+.exitBtn {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+}
+
+.exitBtn:hover , .exitBtn:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#resize {
+    height: 100px;
+}
+
+#resize2 {
+   width: 100%;
+}
+
+footer {
+    box-shadow: 2px 0 4px gray;
+    padding: 2.2rem;
+}
+
+footer p{
+    font-size: 0.8em;
+    margin: 0;
+    letter-spacing: 0.2em;
+}
+
+/*Small Screens*/
+@media(max-width: 560px) {
+    .showcase-home::after {
+        height: 50vh;
+    }
+  
+    .content {
+        top: 5%;
+        margin-top:5px;
+    }
+
+    .content .logo {
+        height: 140px;
+        width:140px;
+    }
+
+    .content .text {
+        display: none;
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .services div {
+        padding: 1.2rem 1rem;
+    }
+}
+
+/*Landscape*/
+@media(max-height: 500px) {
+    .content .title, .content .text {
+        display: none;
+    }
+
+    .content {
+        top: 0;
+    }
+}
